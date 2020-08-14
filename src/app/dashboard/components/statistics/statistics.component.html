@@ -1,0 +1,23 @@
+<mat-list *ngIf="stateData; else unselected">
+  <mat-list-item>
+    At Least One Measure {{ stateData.atleast_one_measure }}
+  </mat-list-item>
+  <mat-list-item>
+    Immunization Measure {{ stateData.immunization_measure }}</mat-list-item
+  >
+  <mat-list-item>
+    Reportable Results
+    {{ stateData.reportable_lab_results_measure }}</mat-list-item
+  >
+  <mat-list-item>
+    Syndromic Measure
+    {{ stateData.syndromic_surveillance_measure }}</mat-list-item
+  >
+  <mat-list-item>
+    Registry Measure {{ stateData.registry_measure }}</mat-list-item
+  >
+</mat-list>
+
+<ng-template #unselected>
+  <p>Please select a state for statistics</p>
+</ng-template>
